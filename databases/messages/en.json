@@ -1,0 +1,35 @@
+{
+    "firstName_required" : "الاسم الاول مطلوب",
+
+    "lastName_required" : "الاسم الثاني مطلوب",
+   
+    "email_required" : "الايميل مطلوب",
+    "email_invlid" : "الايميل غير صحيح",
+ 
+    "password_required" : "رقم المرور مطلوب",
+    "password_invlid" : "رقم المرور غير صحيح",
+
+    "password_not_match" : "رقم المرور غير متطابق",
+    "email_used_before" : "من قبل شخص اخر",
+    "register_success" : "التسجيل تم بنجاح",
+    "user_not_found" : "المستخدم غير موجود",
+
+    "price_required" : "السعر مطلوب",
+    "price_invlid" : "السعر يجب ان يكون ارقام صحيحه",
+
+    "body_required" : "المحتوي مطلوب",
+
+    "phone_required" : "رقم الجوال مطلوب",
+    "phone_invlid" : "رقم الجوال غير صحيح",
+
+    "city_required" : "المدينه مطلوبه",
+
+    "title_required" : "العنوان مطلوب",
+    "title_invlid" : "العنوان مستخدم في اعلان اخر",
+
+    "category_required" : "النوع مطلوب",
+
+    "server_error" : "خطا في السيرفر"
+
+}
+

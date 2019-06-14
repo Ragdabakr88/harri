@@ -1,0 +1,56 @@
+
+  <div class="container">
+    <br>
+    <br>
+
+
+{{#if msg}}
+<div class="alert alert-success alert-dismissible">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong>Success!</strong> {{msg}}
+</div>
+{{/if}}
+
+    <div class="wrapper animated bounceInLeft" style="margin: 7% 0">
+
+
+
+      <div class="company-info">
+        <h3>تواصل معنا  </h3>
+        <ul>
+          <li><i class="fa fa-envelope"></i> hariiiadmaindemooo@gmail.com</li>
+        </ul>
+      </div>
+      <div class="contact">
+        <h3 style='text-align: right'> تواصل معنا  </h3>
+
+
+
+
+        <form  method="post" action="/contact">
+          <p>
+            <label>الاسم </label>
+            <input type="text" name="name" required>
+          </p>
+         
+          <p>
+            <label>الايميل  </label>
+            <input type="email" name="email" required>
+          </p>
+          <p>
+            <label>رقم الهاتف </label>
+            <input type="text" name="phone" required>
+          </p>
+          <p class="full">
+            <label>الرساله </label>
+            <textarea name="message" rows="5" required></textarea>
+          </p>
+          <p class="full">
+            <button>ارسل </button>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+

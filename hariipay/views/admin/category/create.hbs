@@ -1,0 +1,60 @@
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+
+{{#each errors}}
+<div class="alert alert-danger alert-dismissible" style="text-align: right">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong>خطا!</strong> {{message}}
+</div>  
+{{/each}} 
+
+  <h2 class="text-center" > الاقسام </h2>
+		<form action="/admin/category/create" method="post">
+			<div class="form-group">
+				<label for="text">الاسم:</label>
+        <input type="text" class="form-control" name="name">
+			</div>
+			<button type="submit" class='btn btn-primary'> اضافه قسم جديد  </button>
+		</form>
+	</div>
+</div>
+
+<br>
+<br/>
+<hr>
+
+<div class="container">
+  <h2>قائمه الاقسام </h2>
+{{#if success_message}}
+<div class="alert alert-success alert-dismissible">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong></strong> {{success_message}}
+</div>
+{{/if}}
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+      	<th>Id</th>
+        <th>الاسم</th>
+        <th>التاريخ</th>
+      </tr>
+    </thead>
+   
+    <tbody>
+    	{{# each categories}} 
+      <tr>
+      	<td>{{id}}</td>
+        <td>{{name}}</td>
+        <td>{{GenerateTime date 'MMMM Do YYYY'}}</td>
+        <td><a href="/admin/category/edit/{{this.id}}"  type="button" class="btn btn-warning" >تعديل</a></td>
+        <td>
+          <form action="/admin/category/delete/{{id}}?_method=DELETE" method="post" >
+            <button class="btn btn-danger" type="submit">حذف</button>
+          </form>
+        </td>
+      </tr>
+       {{/each}}
+    </tbody>
+   
+  </table>
+</div>

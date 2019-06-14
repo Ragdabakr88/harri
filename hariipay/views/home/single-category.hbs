@@ -1,0 +1,52 @@
+
+<div class="full-banner">
+       <div class="overlay overlay-bg "></div>
+             <h2 class="text-center">  نتائج بحث النوع المطلوب  </h2>
+                    </div>  
+                        <!-- Start post Area -->
+                        <section class="post-area section-gap">
+                            <div class="container">
+                                <div class="row justify-content-center d-flex">
+                                {{#if products}}
+                                     {{#each products}}
+                                    <div class="col-lg-6 post-list">
+                                     
+                           <div class=" single-post-home flex-row d-flex ">
+                            <div class="card">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                     <img class="card-img-top" src="/uploads/{{images.[0]}}" alt="Card image cap">    
+                                    </div>
+                                    <div class="col-md-5">
+                                         <a href="/single/{{id}}"><h2 class="card-title">{{title}}</h2></a> 
+                                         <p class="card-text" id="testt">{{body}}</p>                                 
+                                    </div>
+                                    <div class="col-md-3">
+                                       <a href="/single/{{id}}" class="btn btn-price-btn">{{price}} ر.س  </a> 
+                                    </div>
+                                </div>
+                            <div class="card-footer text-muted">
+                                <ul>
+                                    <li> <ion-icon name="locate" class="green"></ion-icon> {{category.name}}</li>
+                                    <li> <p>
+                                            <ion-icon class="green" name="phone-portrait"></ion-icon> {{phone}}
+                                        </p>
+                                    </li>
+                                    <li><ion-icon name="time" class="green"></ion-icon> {{GenerateTime date 'MMMM Do YYYY'}}</li>
+                                </ul>
+                            </div>
+                          </div>
+                       </div>
+                    </div>
+                  {{/each}}
+                  {{else}}
+                    <h3>لا توجد نتائج للبحث  </h3>
+                  {{/if}}
+                </div>
+            </div>                          
+        </div>
+       </div>
+    </div>  
+    </section>
+    <!-- End post Area -->
+                

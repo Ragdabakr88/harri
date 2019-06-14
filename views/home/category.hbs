@@ -1,0 +1,22 @@
+<div class="row">
+        <!-- Blog Entries Column -->
+        <div class="col-md-6 " style="margin-left:25% ">
+          <!-- Blog Post -->
+          {{# each posts}}
+          <br>
+         <h3>{{category}}</h3>
+          <div class="card mb-4">
+            <img class="card-img-top" src="/uploads/{{file}}" alt="Card image cap">
+            <div class="card-body">
+              <h2 class="card-title">{{title}}</h2>
+              <p class="card-text" id="testt">{{body}}</p>
+              
+              <a href="/single/{{id}}" class="btn btn-primary">Read More &rarr;</a>
+            </div>
+            <div class="card-footer text-muted">
+             {{GenerateTime date 'MMMM Do YYYY'}}
+            </div>
+          </div>
+          {{/each}}
+     </div>
+ </div>

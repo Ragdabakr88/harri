@@ -1,0 +1,70 @@
+      <div class="full-banner">
+              <h2 class="text-center"> اعلاناتي  </h2>
+      </div>         
+            <!-- Start post Area -->
+            <section class="post-area section-gap">
+                        <div class="container">
+                            <div class="row justify-content-center d-flex">
+                                <div class="col-lg-8 post-list">
+                                  {{#each products}}
+                                      <div class=" single-post-home flex-row d-flex ">
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                 <img class="card-img-top" src="/uploads/{{images.[0]}}" alt="Card image cap">    
+                                </div>
+                                <div class="col-xs-6 card-title-mobile" >
+                                     <a href="/single/{{id}}"><h2 class="card-title">{{title}}</h2></a> 
+                                     <p class="card-text" id="testt">{{body}}</p>
+
+                                     <ul class="list-buttons">
+                                       <li> <a href="/product/single/{{id}}" class="btn btn-green">اقرا المذيد &rarr;</a></li>
+
+                                         <li><a href="/product/edit/{{id}}"  type="button" class="btn btn-warning" >تعديل </a></li>
+    
+                                          <li><form action="/product/delete/{{id}}?_method=DELETE" method="post" >   
+                                        <button class="btn btn-danger" type="submit">حذف الاعلان </button>
+                                      </form></li>
+                                      
+                                      <ul>                                 
+                                </div>
+                                <div class="col-md-2">
+                                   <a href="/single/{{id}}" class="btn btn-price-btn card-price-mobile">{{price}} ر.س  </a> 
+                                </div>
+                            </div>
+                        <div class="card-footer text-muted">
+                            <ul>
+                                <li> <ion-icon name="locate" class="green"></ion-icon> {{city.name}}</li>
+                                <li> <p>
+                                        <ion-icon class="green" name="phone-portrait"></ion-icon> {{phone}}
+                                    </p>
+                                </li>
+                                <li><ion-icon name="time" class="green"></ion-icon> {{GenerateTime date 'MMMM Do YYYY'}}</li>
+                            </ul>
+                        </div>
+                      </div>
+      </div>
+                            {{/each}}
+                           
+                        
+                                               <!-- Pagination -->
+                                <ul class="pagination justify-content-center mb-4">
+
+                                    {{#paginate current=current pages=pages}}{{/paginate}}
+
+                                </ul>
+
+                        </div>
+
+                           {{> home/sidebar}}
+                                  
+                                                                      
+                                </div>
+                            </div>                          
+
+                        </div>
+                    </div>
+                </div>  
+            </section>
+            <!-- End post Area -->
+                

@@ -1,0 +1,119 @@
+<footer class="sticky-footer">
+    <div class="container">
+        <div class="text-center">
+            <small>Copyright © Ragda Bakr</small>
+        </div>
+    </div>
+</footer>
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fa fa-angle-up"></i>
+</a>
+<!-- Logout Modal-->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">هل انت مستعد للخروج </h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">اختار خروج اذا كنت تريد المغادره </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">الغاء </button>
+                <a class="btn btn-primary" href="/logout">خروج </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Bootstrap core JavaScript-->
+<script src="/js/jquery/jquery.min.js"></script>
+<script src="/js/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Core plugin JavaScript-->
+<script src="/js/jquery-easing/jquery.easing.min.js"></script>
+<!-- Custom scripts for all pages-->
+<script src="/js/admin/sb-admin.min.js"></script>
+
+<!-- Bootstrap switch-->
+
+<script src="/js/admin/bootstrap-switch.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+<!-- Include AlgoliaSearch JS Client and autocomplete.js library -->
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/admin/search.js"></script>
+
+
+
+
+<script>
+var ctx = document.getElementById("myChart").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["Products", "Comments", "Categories", "Users"],
+        datasets: [{
+            label: '# of Votes',
+            data: [{{productCount}}, {{commentCount }}, {{categoryCount}}, {{userCount}}],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
+
+
+
+
+
+<script>
+
+    $("[name='approveUser']").bootstrapSwitch();
+    $(document).ready(()=>{
+        $("[name='approveUser']").on('switchChange.bootstrapSwitch', function(e, data){
+            const user_id = $(this).attr('data-id');
+            $.ajax({
+                type: "POST",
+                url: '/admin/user/approve-user',
+                data: {user_id: user_id, approveUser: data},
+                cache: false,
+                success: function(data){
+                    if(data.user.approveUser) {
+                        toastr.success(` ${data.user.firstName +' ' + data.user.lastName} تم اضافه المستخدم`);
+                    } else {
+                        toastr.success(` ${data.user.firstName +' ' + data.user.lastName } تم الغاء المستخدم `);
+                    }
+                }
+
+            });
+      });
+});
+
+</script>

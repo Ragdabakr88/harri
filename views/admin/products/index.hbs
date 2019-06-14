@@ -1,0 +1,49 @@
+<section class="col-md-11">
+  <br/>
+  <h1 class="text-center">جميع المنتجات </h1>
+  <br/> {{#if success_message}}
+  <div class="alert alert-success alert-dismissible" style="text-align: right">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    {{success_message}}
+  </div>
+  {{/if}}
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>الصوره </th>
+        <th>العنوان </th>
+        <th>الجوال </th>
+        <th>القسم</th>
+        <th>السعر</th>
+        <th>الي المنتج </th>
+        <th>التاريخ </th>
+
+      </tr>
+    </thead>
+
+    <tbody>
+      {{#each products}}
+      <tr>
+        <td>{{id}}</td>
+        <td><img src="/uploads/{{images.[0]}}" style="width: 80px ; height: 50px"></td>
+        <td>{{title}}</td>
+        <td>{{phone}}</td>
+        <td>{{category.name}}</td>
+        <td>{{price}}</td>
+        <td><a href="/single/{{id}}"> االمنتج </a></td>
+        <td>{{GenerateTime date 'MMMM Do YYYY'}}</td>
+        <td><a href="/admin/products/edit/{{this.id}}" type="button" class="btn btn-warning">تعديل </a></td>
+        <td>
+
+          <form action="/admin/products/delete/{{id}}?_method=DELETE" method="post">
+            <button class="btn btn-danger" type="submit">حذف المنتج </button>
+          </form>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+
+  </table>
+</section>

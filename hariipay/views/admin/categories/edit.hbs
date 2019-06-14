@@ -1,0 +1,15 @@
+
+
+<div class="row">
+   <div class="col-sm-4">
+     <h3>تعديل القسم</h3>
+       <br/>
+		    <form action="/admin/categories/edit/{{category.id}}?_method=PUT" method="post">
+		        <div class="form-group">
+		            <label for="name">الاسم</label>
+		            <input value="{{category.name}}" type="text" name="name" placeholder="الاسم" class="form-control">
+		        </div>
+		        <button class="btn btn-primary">تعديل القسم</button>
+		    </form>
+    </div>
+</div>

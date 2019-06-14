@@ -1,0 +1,52 @@
+
+
+<div class="card card-register mx-auto mt-5" style="width:60%;">
+    <div class="card-header text-center"><h3>تسجيل حساب جديد  </h3></div>
+        
+{{#each errors}}
+<div class="alert alert-danger alert-dismissible">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong>خطا!</strong> {{this}}
+</div>  
+{{/each}}
+
+    <div class="card-body">
+        <form action="/register" method="post" >
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-6">
+                        <label for="exampleInputName"> الاسم الاول </label>
+                        <input name="firstName" class="form-control" id="exampleInputName" type="text" aria-describedby="nameHelp" placeholder="ادخل الاسم الاول" value="{{firstName}}">
+
+                    </div>
+                    <div class="col-md-6">
+                        <label for="exampleInputLastName">الاسم الثاني</label>
+                        <input name="lastName" class="form-control" id="exampleInputLastName" type="text" aria-describedby="nameHelp" placeholder="ادخل الاسم الثاني " value="{{lastName}}">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">الايميل</label>
+                <input name="email" class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" placeholder="ادخل ايميلك  " value="{{email}}">
+            </div>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-6">
+                        <label for="exampleInputPassword1">كلمه المرور</label>
+                        <input name="password" class="form-control" id="exampleInputPassword1" type="password" placeholder="ادخل كلمه المرور ">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="exampleConfirmPassword">تاكيد كلمه المرور </label>
+                        <input name="passwordConfirm" class="form-control" id="exampleConfirmPassword" type="password" placeholder="تاكيد كلمه المرور ">
+                    </div>
+                </div>
+            </div>
+            <div style="height:30px"></div>
+            <button type="submit" class="btn btn-primary btn-block">التسجيل</button>
+        </form>
+        <div class="text-center">
+            <a class="d-block small mt-3" href="/login">صفحه الدخول </a>
+            <a class="d-block small" href="/">الصفحه الرئيسيه </a>
+        </div>
+    </div>
+</div>

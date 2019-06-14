@@ -1,0 +1,19 @@
+
+body {
+    padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+    body {
+        padding-top: 56px;
+    }
+}
+.page-item.active .page-link {
+    z-index: 2;
+    color: #fff;
+    background-color: #2aa517;
+    border-color: #2aa517;
+}
+.date{
+	font-size: 10px;
+}

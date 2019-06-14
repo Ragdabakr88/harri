@@ -1,0 +1,33 @@
+
+
+            
+                   <div class="col-lg-4 sidebar">
+                    {{#if user.approveUser}}
+                      <a href="/product/create"><button class="btn price-button">اضف اعلانك  </button></a>
+                    {{/if}}
+                         <div class="single-slidebar" style="max-height: 400px;overflow: auto;">
+                                <h4>ابحث عن طريق الانواع </h4>
+                                <ul class="cat-list">
+                                     {{#each categories}}
+                                    <li><a  class="justify-content-between d-flex" href="/product/category/{{id}}"><p>{{name}}</p></a></li>
+                                     {{/each}}
+                                </ul>
+                            </div>
+
+                              <div class="single-slidebar" style="max-height: 400px;overflow: auto;">
+                                <h4>البحث  عن طريق المدينه  </h4>
+                                <ul class="cat-list">
+                                     {{#each cities}}
+                                    <li><a  class="justify-content-between d-flex" href="/product/city/{{id}}"><p>{{name}}</p></a></li>
+                                     {{/each}}
+                                </ul>
+                            </div>
+                           
+
+                                          
+                    
+             
+
+
+
+         

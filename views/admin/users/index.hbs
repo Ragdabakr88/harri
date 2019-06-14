@@ -1,0 +1,37 @@
+<section class="col-md-11">
+  <br/>
+  <h1 class="text-center"> جميع المستخدمين </h1>
+  <br/> {{#if success_message}}
+  <div class="alert alert-success alert-dismissible" style="text-align: right">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    {{success_message}}
+  </div>
+  {{/if}}
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>الاسم </th>
+        <th> الايميل </th>
+        <th> تفعيل التسجيل </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {{#each users}}
+      <tr>
+        <td>{{id}}</td>
+        <td>{{firstName}}</td>
+        <td>{{email}}</td>
+        {{#if approveUser}}
+          <td> <input data-id="{{id}}" checked type="checkbox" name="approveUser" /></td>
+        {{else}}
+          <td> <input data-id="{{id}}" type="checkbox" name="approveUser" /></td>
+        {{/if}}
+      </tr>
+      {{/each}}
+    </tbody>
+
+  </table>
+</section>

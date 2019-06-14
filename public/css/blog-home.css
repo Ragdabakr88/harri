@@ -1,0 +1,211 @@
+
+/*!
+ * Start Bootstrap - Blog Home (https://startbootstrap.com/template-overviews/blog-home)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-blog-home/blob/master/LICENSE)
+ */
+
+body {
+  padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
+.card-img-top {
+    height: 170px;
+    margin-bottom: 5px;
+    padding: 15px;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+}
+
+
+
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: right;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+   width: 700px;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+
+}
+.card-text{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.card-title{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.card-footer ul li {
+  display:inline-block;
+  padding-right:10px;
+  padding-left: 10px;
+}
+.btn-price-btn {
+    color: #fff;
+    background-color: #2aa517;
+    border-color: #2aa517;
+    margin-top: 30px; 
+   padding-left:5px;
+
+}
+
+.card-title {
+    margin-bottom: 0.75rem;
+    padding-top: 20px;
+}
+
+
+/*Contact form */
+
+label {
+  float:right;
+}
+
+ul{
+  list-style: none;
+  padding:0;
+}
+
+.brand{
+  text-align: center;
+}
+
+.brand span{
+  color:#fff;
+}
+
+.wrapper{
+  box-shadow: 0 0 20px 0 rgba(72,94,116,0.7);
+}
+
+.wrapper > *{
+  padding: 1em;
+}
+
+.company-info{
+  background:#c9e6ff;
+}
+
+.company-info h3, .company-info ul{
+  text-align: center;
+  margin:0 0 1rem 0;
+}
+
+.contact{
+  background:#f9feff;
+}
+
+/* FORM STYLES */
+.contact form{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap:20px;
+}
+
+.contact form label{
+  display:block;
+}
+
+.contact form p{
+  margin:0;
+}
+
+.contact form .full{
+  grid-column: 1 / 3;
+}
+
+.contact form button, .contact form input, .contact form textarea{
+  width:100%;
+  padding:1em;
+  border:1px solid #c9e6ff;
+}
+
+.contact form button{
+  background:#c9e6ff;
+  border:0;
+  text-transform: uppercase;
+}
+
+.contact form button:hover,.contact form button:focus{
+  background:#92bde7;
+  color:#fff;
+  outline:0;
+  transition: background-color 2s ease-out;
+}
+
+/* LARGE SCREENS */
+@media(min-width:700px){
+  .wrapper{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .wrapper > *{
+    padding:2em;
+  }
+
+  .company-info h3, .company-info ul, .brand{
+    text-align: left;
+  }
+}
+
+/*Footer*/
+
+.footer {
+    
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+
+
+@media (max-width: 800px) {
+
+.card-title-mobile a h2{
+  font-size: 18px;
+   margin-right: 20px;
+}
+.card-title-mobile p{
+  font-size: 14px;
+  margin-right: 20px;
+}
+.card-price-mobile{
+  margin-top: -15px;
+  margin-right: 20px;
+  margin-bottom: 15px;
+}
+
+.list-buttons li{
+ margin-top: 5px;
+
+}
+.list-buttons li form button{
+ margin-bottom: 5px;
+
+}
+
+
+}

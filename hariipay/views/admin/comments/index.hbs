@@ -1,0 +1,32 @@
+
+<section class="col-md-11">
+<br/>
+<h1 class="text-center"> التعليقات   </h1>
+<br/>
+   <input type="hidden" id="product_id" value="{{ptoduct._id}}">        
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>صاحب التعليق </th>
+        <th>التعليق </th>
+        <th>التاريخ </th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each comments}}
+      <tr>
+        <td>{{id}}</td>
+        <td>{{user.firstName}}</td>
+        <td>{{body}}</td>
+        <td>{{GenerateTime date 'MMMM Do YYYY'}}</td>  
+        <td>   
+          <form action="/home/comment/delete/{{id}}?_method=DELETE"  method="post" >
+            <button class="btn btn-danger" type="submit">حذف </button>
+          </form>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  </section>
