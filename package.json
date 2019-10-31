@@ -27,7 +27,7 @@
     "i": "^0.3.6",
     "method-override": "^2.3.10",
     "moment": "^2.22.2",
-    "mongoose": "^5.0.13",
+    "mongoose": "^5.7.5",
     "mongoose-algolia": "^1.7.1",
     "mongoose-url-slugs": "^1.0.2",
     "morgan": "^1.9.0",
