@@ -31,7 +31,7 @@
     "mongoose-algolia": "^1.7.1",
     "mongoose-url-slugs": "^1.0.2",
     "morgan": "^1.9.0",
-    "nodemailer": "^4.6.4",
+    "nodemailer": "^6.4.16",
     "nodemailer-smtp-transport": "^2.7.4",
     "npm": "^5.8.0",
     "passport": "^0.4.0",
